@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AVL Tree Visualization - Interactive AVL balanced binary search tree with insert, delete, find, and print operations">
+    <title>AVL Tree Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>AVL Tree</h1>
+    </header>
+
+    <div id="controls">
+        <input type="text" id="insertInput" maxlength="4" size="4">
+        <button id="insertBtn" onclick="handleInsert()">Insert</button>
+        <input type="text" id="deleteInput" maxlength="4" size="4">
+        <button id="deleteBtn" onclick="handleDelete()">Delete</button>
+        <input type="text" id="findInput" maxlength="4" size="4">
+        <button id="findBtn" onclick="handleFind()">Find</button>
+        <button id="printBtn" onclick="handlePrint()">Print</button>
+    </div>
+
+    <div id="canvas-container">
+        <canvas id="treeCanvas" width="1000" height="500"></canvas>
+    </div>
+
+    <div id="message-bar">
+        <span id="messageText"></span>
+    </div>
+
+    <div id="animation-controls">
+        <div id="anim-buttons">
+            <button onclick="skipBack()">Skip Back</button>
+            <button onclick="stepBack()">Step Back</button>
+            <button id="pauseBtn" onclick="togglePause()">Pause</button>
+            <button onclick="stepForward()">Step Forward</button>
+            <button onclick="skipForward()">Skip Forward</button>
+
+            <input type="range" id="speedSlider" min="1" max="100" value="50">
+
+            <span class="size-lbl">w:</span>
+            <input type="text" id="canvasWidth" value="1000" size="4">
+            <span class="size-lbl">h:</span>
+            <input type="text" id="canvasHeight" value="500" size="4">
+            <button onclick="changeCanvasSize()">Change Canvas Size</button>
+            <button onclick="moveControls()">Move Controls</button>
+        </div>
+        <div id="speed-label">Animation Speed</div>
+    </div>
+
+    <footer id="footer">
+        <a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html" target="_blank">Algorithm
+            Visualizations</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
