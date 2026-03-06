@@ -348,7 +348,7 @@ function drawCircles(n, pos) {
     ctx.font = '12px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(String(n.key).padStart(4, '0'), p.x, p.y);
+    ctx.fillText(String(n.key).padStart(4, ''), p.x, p.y);
 
     ctx.fillStyle = '#666';
     ctx.font = '10px Arial';
